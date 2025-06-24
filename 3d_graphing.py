@@ -26,7 +26,7 @@ def graph_3D_complex_functions(function):
     ax.plot_surface(X.real, Y.imag, Z.real, rstride=5, cstride=5,
                     cmap='viridis')
 
-    #allows the extreme points to be much more clear than the generic bounds
+    #allows the extreme points to be much more clear than the generic bounds, the very small addition just allows for bypassing of an error that pops up when a plane is inputted
     ax.set_zlim3d(np.amin(Z[30]).real, np.amax(Z[70]).real+0.000000000000001)
 
     plt.show()
